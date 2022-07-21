@@ -1,9 +1,8 @@
 class Solution(object):
     def maxSubArray(self, nums):
-        maxArray = []
-        curSubArray = []
-        for i in range (len(nums)):
-            curSubArray.append(nums[i])
-            curSubArray.append(nums)nums[i] + nums[i+1]
-            if maxArray < curSubArray:
-                maxArray =
+        maxArray = nums[0]
+        curSubArray = nums[0]
+        for n in nums:
+
+            if sum(curSubArray) > sum(maxArray):
+                maxArray = curSubArray
