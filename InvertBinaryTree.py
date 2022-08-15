@@ -14,3 +14,14 @@ class Solution(object):
         self.invertTree(root.right)
 
         return root
+
+
+    def maxdepth(self, root, depth):
+
+        if not root:
+            return depth
+
+        self.maxdepth(self, root.left, depth+1)
+        self.maxdepth(self, root.right, depth+1)
+
+        max()
